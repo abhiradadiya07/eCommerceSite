@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <nav className={`bg-background p-6 top-0 text-foreground shadow-md sticky z-20`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-5xl mx-auto flex items-center justify-between">
           {/* Menu Icon (visible on mobile) */}
           <button onClick={toggleSidebar} className="lg:hidden hover:text-primary">
             <Menu className="h-6 w-6" />

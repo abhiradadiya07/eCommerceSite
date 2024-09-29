@@ -1,8 +1,10 @@
+import Banner from "@/components/common/Banner"
 import Slider from "@/components/common/Slider"
 
 const Home = () => {
   return (
-    <div><Slider/></div>
+    <div><Slider/>
+    <Banner title={"dshfijasdifjs"}></Banner></div>
   )
 }
 

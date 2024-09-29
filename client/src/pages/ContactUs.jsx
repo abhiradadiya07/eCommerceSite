@@ -2,9 +2,9 @@
 const ContactUs = () => {
   return (
     <>
-      <div className="container mx-auto my-12 py-12">
-        <h1 className="text-center text-3xl font-bold">Contact Us</h1>
-        <hr className="my-4 border-gray-300" />
+      <div className="mx-auto h-screen">
+      <h1 className="text-center text-5xl font-bold max-w-5xl mx-auto text-foreground mt-8">Products</h1>
+      <hr className="my-4 max-w-5xl mx-auto" />
 
         <div className="flex justify-center items-center my-8">
           <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-white p-6 rounded-lg shadow-lg">

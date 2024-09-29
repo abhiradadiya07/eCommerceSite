@@ -28,6 +28,8 @@ const Products = () => {
   console.log(products[0]);
   return (
     <div className="bg-background">
+       <h1 className="text-center text-5xl font-bold mt-8 max-w-5xl mx-auto text-foreground">Latest Products</h1>
+       <hr className="my-4 max-w-5xl mx-auto" />
       <div className="max-w-5xl mx-auto">
         {loading ? (
           <div><Loading /></div>
