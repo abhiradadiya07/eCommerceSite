@@ -11,13 +11,7 @@ const SimilarProducts = ({ selectedProduct }) => {
           <ProductCard
             key={item.id}
             title={item.title}
-            productItem={{
-              productName: item.title,
-              price: item.price,
-              imgUrl: item.image,
-              id: item.id,
-              rating: item.rating.rate
-            }}
+            productItem={item}
           />
         ))}
       </div>

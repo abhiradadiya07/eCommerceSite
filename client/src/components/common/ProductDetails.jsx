@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 import { Star } from "lucide-react";
 import { useState } from "react";
 import { Input } from "../ui/input";
+import Banner from "./Banner";
 
 
 const ProductDetails = ({ selectedProduct }) => {
@@ -31,6 +32,7 @@ const ProductDetails = ({ selectedProduct }) => {
   }
   return (
     <>
+      <Banner title={selectedProduct.title} />
       <div className="md:mx-auto m-4 my-10 py-5 max-w-6xl text-foreground">
         <div className="md:grid md:grid-cols-2 border-4 w-full md:m-3 items-center">
           <div className="p-3 bg-white">

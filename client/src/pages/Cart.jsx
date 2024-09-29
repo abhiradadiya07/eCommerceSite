@@ -40,6 +40,7 @@ const Cart = () => {
     let subtotal = 0;
     let shipping = 30.0;
     let totalItems = 0;
+    console.log(cartList);
     cartList.forEach((item) => {
       subtotal += item.price * item.qty;
       totalItems += item.qty;
@@ -89,7 +90,7 @@ const Cart = () => {
             <div className="w-full md:w-2/3 md:order-1 md:pr-4">
               <div className="bg-white shadow-md rounded-lg">
                 <div className="bg-gray-100 p-4 rounded-t-lg">
-                  <h5 className="text-lg font-semibold ">Item List</h5>
+                  <h5 className="text-lg font-semibold dark:text-background">Item List</h5>
                 </div>
                 <div className="p-6">
                   {cartList.map((item) => {
@@ -106,14 +107,14 @@ const Cart = () => {
                             onClick={() => navigate(`/product/${item.id}`)}
                           >
                             <img
-                              src={item.imgUrl}
-                              alt={item.productName}
-                              className="w-full rounded"
+                              src={item.image}
+                              alt={item.title}
+                              className="w-full rounded min-h-48 object-contain"
                             />
                           </div>
                           <div className="w-full sm:w-1/2 sm:pl-6 mb-4 sm:mb-0 cursor-pointer"
                             onClick={() => navigate(`/product/${item.id}`)}>
-                            <p className="text-lg font-semibold">{item.productName}</p>
+                            <p className="text-lg font-semibold">{item.title}</p>
                           </div>
                           <div className="w-full sm:w-1/4 flex flex-col items-center">
                             <div className="flex items-center mb-4">

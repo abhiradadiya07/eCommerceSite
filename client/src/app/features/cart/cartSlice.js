@@ -22,7 +22,10 @@ export const cartSlice = createSlice({
       if (productExit) {
         state.cartList = state.cartList.map((item) =>
           item.id === action.payload.product.id
-            ? { ...productExit, qty: productExit.qty + action.payload.num }
+            ? {
+                ...productExit,
+                qty: Number(productExit.qty) + Number(action.payload.num),
+              }
             : item
         );
       } else {
@@ -41,7 +44,7 @@ export const cartSlice = createSlice({
       } else {
         state.cartList = state.cartList.map((item) =>
           item.id === productExit.id
-            ? { ...productExit, qty: productExit.qty - 1 }
+            ? { ...productExit, qty: Number(productExit.qty - 1) }
             : item
         );
       }
@@ -68,6 +71,7 @@ export const cartMiddleware = (store) => (next) => (action) => {
   return result;
 };
 
-export const { addToCart, decreaseQty, deleteProduct,clearCart } = cartSlice.actions;
+export const { addToCart, decreaseQty, deleteProduct, clearCart } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;
