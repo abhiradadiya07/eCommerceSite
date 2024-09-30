@@ -1,9 +1,16 @@
-import Slider from "@/components/common/Slider"
+import Section from "@/components/common/Section"
+import SliderHome from "@/components/common/Slider"
+
 
 const Home = () => {
+
   return (
-    <div><Slider/>
-    
+    <div className="bg-background">
+      <SliderHome/>
+      <Section title={"women's clothing"}  bgColor={"bg-background"} />
+      <Section title={"men's clothing"} bgColor={"bg-background"}  />
+      <Section title={"jewelery"}   bgColor={"bg-background"} />
+      <Section title={"electronics"} bgColor={"bg-background"}  />
     </div>
   )
 }

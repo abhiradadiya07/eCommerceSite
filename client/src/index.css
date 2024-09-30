@@ -97,7 +97,7 @@
 
 @layer base {
   :root {
-    --background: 22 60% 98%;
+    --background: 22 60% 98%; /*#FDF9F7 f7fbf9 f3dace f8eae3*/
     --foreground: 22 71% 3%;
     --muted: 352 18% 91%;
     --muted-foreground: 352 10% 36%;
@@ -120,7 +120,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 84% 4.9%; /*#020817*/
     --foreground: 22 14% 97%;
     --muted: 352 18% 9%;
     --muted-foreground: 352 10% 64%;

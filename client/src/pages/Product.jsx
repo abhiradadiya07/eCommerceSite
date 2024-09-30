@@ -1,6 +1,7 @@
 import Loading from "@/components/common/Loading";
 import ProductDetails from "@/components/common/ProductDetails";
 import SimilarProducts from "@/components/common/SimilarProducts";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -15,14 +16,14 @@ const Product = () => {
   const getProduct = async () => {
     setLoading(true);
     setLoading2(true);
-    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-    const data = await response.json();
+    const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    const data = response.data;
     setProduct(data);
     setLoading(false);
-    const response2 = await fetch(
+    const response2 = await axios.get(
       `https://fakestoreapi.com/products/category/${data.category}`
-    )
-    const data2 = await response2.json();
+    );
+    const data2 = response2.data;
     setSimilarProducts(data2);
     setLoading2(false);
   }

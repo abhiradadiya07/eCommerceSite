@@ -26,8 +26,8 @@ const ProductCard = ({ productItem }) => {
   };
 
   return (
-    <div className="shadow-xl rounded-lg overflow-hidden hover:shadow-2xl dark:text-background mt-4 dark:bg-foreground m-4" >
-      <div className="relative bg-white cursor-pointer" onClick={handleClick}>
+    <div className="shadow-xl rounded-lg overflow-hidden hover:shadow-2xl dark:text-background mt-4 dark:bg-foreground dark:border-primary m-4 border-2 border-primary" >
+      <div className="relative bg-white cursor-pointer border-b-2 border-primary" onClick={handleClick}>
         <img
           src={productItem.image}
           alt={productItem.title}
@@ -42,7 +42,7 @@ const ProductCard = ({ productItem }) => {
         <div className="text-xl font-bold mt-4 flex gap-1 items-center">{productItem.rating?.rate}<Star size={20} fill="orange" strokeWidth={0} /></div>
         <div className="flex items-center mt-2 justify-between">
           <div className="text-xl font-bold ">${productItem.price}</div>
-          <Button onClick={handleAddToCart} className="text-sm cursor-pointer bg-background text-foreground border-2 border-black hover:bg-muted">
+          <Button onClick={handleAddToCart} className="text-sm cursor-pointer bg-primary font-bold border-2 border-primary hover:bg-white">
             Add to Cart
           </Button>
         </div>

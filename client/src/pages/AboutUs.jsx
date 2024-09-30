@@ -25,14 +25,14 @@ const AboutUs = () => {
         </p>
 
         <h2 className="text-center text-2xl  font-semibold py-6">Our Products</h2>
-        <div className="flex flex-wrap justify-center text-black gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 justify-center text-black gap-6">
           {[
             { src: "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Men's Clothing", title: "Men's Clothing" },
             { src: "https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Women's Clothing", title: "Women's Clothing" },
             { src: "https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Jewellery", title: "Jewellery" },
             { src: "https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Electronics", title: "Electronics" }
           ].map((product, index) => (
-            <Link to={'/products'} key={index} className="w-full sm:w-1/2 md:w-1/4 px-3 mb-6 cursor-pointer">
+            <Link to={'/products'} key={index} className="w-3/4 px-3 mx-auto   mb-6 cursor-pointer">
               <div className="bg-white shadow-md rounded-lg overflow-hidden h-full">
                 <img
                   className="w-full h-40 object-cover"

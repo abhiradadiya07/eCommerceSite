@@ -46,3 +46,33 @@ export const navIcons = [
   { to: "/login", icon: User, ariaLabel: "Login" },
   { to: "/cart", icon: ShoppingCart, ariaLabel: "Cart" },
 ];
+
+export const SliderData = [
+  {
+    id: 1,
+    title: "Discover Collection",
+    desc: "New Women Fashion Arrivals.",
+    cover: {
+      mobile: Womens_Mobile,
+      desktop: Womens,
+    },
+  },
+  {
+    id: 2,
+    title: "Elegance is Elimination",
+    desc: "I make clothes make fashion.",
+    cover: {
+      mobile: Child_Mobile,
+      desktop: Child,
+    },
+  },
+  {
+    id: 3,
+    title: "In a world full of Trends",
+    desc: "Fashions Fade style is eternal.",
+    cover: {
+      mobile: Mens_Mobile,
+      desktop: Mens,
+    },
+  },
+];
