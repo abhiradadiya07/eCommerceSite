@@ -74,9 +74,9 @@ const Products = () => {
   const orderBy = ["Ascending", "Descending"];
   return (
     <div className="bg-background">
-      <h1 className="text-center text-5xl font-bold mt-8 max-w-5xl mx-auto text-foreground">Latest Products</h1>
+      <h1 className="text-center text-5xl  mt-8 max-w-5xl mx-auto text-foreground">Latest Products</h1>
       <hr className="my-4 max-w-5xl mx-auto" />
-      <div className="max-w-5xl mx-auto m-2 flex flex-col items-center sm:flex-row sm:justify-evenly gap-4">
+      <div className="max-w-5xl mx-auto m-2 flex flex-col items-center sm:flex-row sm:justify-evenly gap-4 px-4  *:w-full">
         <Filter categories={categories} onSelect={handleFilterSelect} />
         <SortByPrice orderBy={orderBy} onSelect={handlePrice} />
         <SearchBar onSearch={handleSearch} />

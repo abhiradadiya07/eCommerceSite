@@ -36,13 +36,13 @@ const ProductCard = ({ productItem }) => {
       </div>
 
       <div className="p-4">
-        <h3 className="text-lg font-semibold truncate">
+        <h3 className="text-lg  truncate">
           {productItem.title}
         </h3>
-        <div className="text-xl font-bold mt-4 flex gap-1 items-center">{productItem.rating?.rate}<Star size={20} fill="orange" strokeWidth={0} /></div>
+        <div className="text-xl  mt-4 flex gap-1 items-center">{productItem.rating?.rate}<Star size={20} fill="orange" strokeWidth={0} /></div>
         <div className="flex items-center mt-2 justify-between">
-          <div className="text-xl font-bold ">${productItem.price}</div>
-          <Button onClick={handleAddToCart} className="text-sm cursor-pointer bg-primary font-bold border-2 border-primary hover:bg-white">
+          <div className="text-xl  ">${productItem.price}</div>
+          <Button onClick={handleAddToCart} className="text-sm cursor-pointer bg-primary  border-2 border-primary hover:bg-white">
             Add to Cart
           </Button>
         </div>

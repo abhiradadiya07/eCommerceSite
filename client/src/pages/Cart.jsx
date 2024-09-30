@@ -9,7 +9,7 @@ const EmptyCart = () => {
     <div className="mx-auto">
       <div className="flex justify-center items-center h-screen">
         <div className="text-center bg-gray-100 p-8 rounded-lg">
-          <h4 className="text-2xl font-semibold mb-4 text-black">Your Cart is Empty</h4>
+          <h4 className="text-2xl  mb-4 text-black">Your Cart is Empty</h4>
           <Link to="/products" className="text-gray-700 flex gap-1 py-2 px-6 border border-gray-700 hover:bg-gray-700 hover:text-white transition rounded-lg">
             <ShoppingBag /><span>Continue Shopping</span>
           </Link>
@@ -40,21 +40,20 @@ const Cart = () => {
     let subtotal = 0;
     let shipping = 30.0;
     let totalItems = 0;
-    console.log(cartList);
     cartList.forEach((item) => {
       subtotal += item.price * item.qty;
       totalItems += item.qty;
     });
 
     return (
-      <section className="h-full py-4 bg-background w-full">
+      <section className="h-full py-4">
         <div className="mx-auto max-w-5xl px-4">
           <div className="flex flex-col md:flex-row justify-center my-8">
             {/* Order Summary - Now first in mobile view */}
             <div className="w-full md:w-1/3 md:order-2 mb-8 md:mb-0 text-black">
               <div className="bg-white shadow-md rounded-lg mb-8">
                 <div className="bg-gray-100 p-4 rounded-t-lg">
-                  <h5 className="text-lg font-semibold">Order Summary</h5>
+                  <h5 className="text-lg ">Order Summary</h5>
                 </div>
                 <div className="p-6">
                   <ul className="mb-6">
@@ -68,14 +67,14 @@ const Cart = () => {
                     </li>
                     <li className="flex justify-between items-center py-2">
                       <span>Total Amount</span>
-                      <span className="text-xl font-bold">${Math.round(subtotal + shipping)}</span>
+                      <span className="text-xl ">${Math.round(subtotal + shipping)}</span>
                     </li>
                   </ul>
                   <Link
                     to="/checkout"
                     className="block text-center bg-gray-800 text-white py-2 px-6 rounded hover:bg-gray-900 transition mb-4"
                   >
-                    Go to Checkout
+                    Proceed To Buy
                   </Link>
                   <button
                     onClick={handleClearCart}
@@ -90,7 +89,7 @@ const Cart = () => {
             <div className="w-full md:w-2/3 md:order-1 md:pr-4">
               <div className="bg-white shadow-md rounded-lg">
                 <div className="bg-gray-100 p-4 rounded-t-lg">
-                  <h5 className="text-lg font-semibold dark:text-background">Item List</h5>
+                  <h5 className="text-lg  dark:text-background">Item List</h5>
                 </div>
                 <div className="p-6">
                   {cartList.map((item) => {
@@ -114,7 +113,7 @@ const Cart = () => {
                           </div>
                           <div className="w-full sm:w-1/2 sm:pl-6 mb-4 sm:mb-0 cursor-pointer"
                             onClick={() => navigate(`/product/${item.id}`)}>
-                            <p className="text-lg font-semibold">{item.title}</p>
+                            <p className="text-lg ">{item.title}</p>
                           </div>
                           <div className="w-full sm:w-1/4 flex flex-col items-center">
                             <div className="flex items-center mb-4">
@@ -122,9 +121,9 @@ const Cart = () => {
                               <p className="mx-4">{item.qty}</p>
                               <Button onClick={() => addItem(item)}><Plus /></Button>
                             </div>
-                            <p className="text-lg">
-                              <strong>{item.qty} x ${item.price}</strong>
-                            </p>
+                            <div className="text-lg">
+                              <div>{item.qty} x ${item.price}</div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -141,7 +140,7 @@ const Cart = () => {
 
   return (
     <div className="mx-auto w-full bg-background text-foreground">
-      <h1 className="text-center text-5xl font-bold mt-8 max-w-5xl mx-auto">Cart</h1>
+      <h1 className="text-center text-5xl  mt-8 max-w-5xl mx-auto">Cart</h1>
       <hr className="my-4 max-w-5xl mx-auto" />
       {cartList.length > 0 ? <ShowCart /> : <EmptyCart />}
     </div>

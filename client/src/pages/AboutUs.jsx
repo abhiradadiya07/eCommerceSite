@@ -5,7 +5,7 @@ const AboutUs = () => {
     <>
       <div className="p-8 mx-auto bg-background text-foreground w-full">
         {/* About Us Section */}
-        <h1 className="text-center text-5xl font-bold">About Us</h1>
+        <h1 className="text-center text-5xl ">About Us</h1>
         <hr className="my-4 border-gray-300 max-w-5xl mx-auto" />
         <div className="max-w-5xl mx-auto">
         <p className="text-center text-xl leading-relaxed">
@@ -24,7 +24,7 @@ const AboutUs = () => {
           dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum
         </p>
 
-        <h2 className="text-center text-2xl  font-semibold py-6">Our Products</h2>
+        <h2 className="text-center text-2xl   py-6">Our Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 justify-center text-black gap-6">
           {[
             { src: "https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Men's Clothing", title: "Men's Clothing" },

@@ -7,7 +7,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
             <div className="flex items-center mb-4">
               <ion-icon name="bag" className="text-4xl text-white"></ion-icon>
-              <h1 className="text-2xl font-bold ml-2">Multimart</h1>
+              <h1 className="text-2xl  ml-2">Multimart</h1>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
@@ -18,7 +18,7 @@ const Footer = () => {
 
           {/* About Us */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
-            <h2 className="text-xl font-semibold mb-4">About Us</h2>
+            <h2 className="text-xl  mb-4">About Us</h2>
             <ul className="space-y-2 text-gray-400">
               <li>Careers</li>
               <li>Our Stores</li>
@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Customer Care */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
-            <h2 className="text-xl font-semibold mb-4">Customer Care</h2>
+            <h2 className="text-xl  mb-4">Customer Care</h2>
             <ul className="space-y-2 text-gray-400">
               <li>Help Center</li>
               <li>How to Buy</li>
@@ -42,7 +42,7 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
-            <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
+            <h2 className="text-xl  mb-4">Contact Us</h2>
             <ul className="space-y-2 text-gray-400">
               <li>70 Washington Square South, New York, NY 10012, United States</li>
               <li>Email: uilib.help@gmail.com</li>

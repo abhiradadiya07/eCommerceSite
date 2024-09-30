@@ -42,16 +42,16 @@ const ProductDetails = ({ selectedProduct }) => {
               alt={selectedProduct.title}
             />
           </div>
-          <div className="p-6">
+          <div className="sm:p-6 p-4">
             <h4 className="text-gray-500 uppercase text-xl sm:text-4xl">{selectedProduct.category}</h4>
-            <h1 className="text-4xl sm:text-5xl font-bold my-3">{selectedProduct.title}</h1>
+            <h1 className="md:text-4xl sm:text-2xl text-xl  my-3">{selectedProduct.title}</h1>
             <div className="text-3xl flex items-center gap-[0.5]">
               <div>
                 {selectedProduct?.rating?.rate}
               </div>
               <Star strokeWidth={0} fill="orange" size={35} />
             </div>
-            <h3 className="text-xl sm:text-3xl font-semibold my-4">${selectedProduct.price}</h3>
+            <h3 className="text-xl sm:text-3xl  my-4">${selectedProduct.price}</h3>
             <p className="text-sm sm:text-lg ">{selectedProduct.description}</p>
             <Input
               className="w-1/2 my-4"

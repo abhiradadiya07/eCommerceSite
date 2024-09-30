@@ -20,11 +20,10 @@ const Section = ({ title, bgColor}) => {
   useEffect(() => {
     getProductByCategory()
   }, [title])
-  console.log(productItems);
   return (
     <section className={`${bgColor} w-full mt-10 p-4 pt-16`} >
       <div className="text-center mb-8">
-        <h1 className="text-3xl text-foreground font-bold">{title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()}</h1>
+        <h1 className="text-3xl text-foreground ">{title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()}</h1>
       </div>
       {/* <div className="flex flex-wrap justify-center"> */}
       <div className="max-w-5xl mx-auto">

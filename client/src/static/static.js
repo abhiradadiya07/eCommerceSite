@@ -35,15 +35,12 @@ export const navLinks = [
   { to: "/", text: "Home" },
   { to: "/products", text: "Products" },
   { to: "/about", text: "About Us" },
-  { to: "/contact", text: "Contact Us" },
 ];
 
-import { Search, Heart, User, ShoppingCart } from "lucide-react";
+import { Search, ShoppingCart } from "lucide-react";
 
 export const navIcons = [
   { to: "/products", icon: Search, ariaLabel: "Search products" },
-  { to: "/wishlist", icon: Heart, ariaLabel: "Wishlist" },
-  { to: "/login", icon: User, ariaLabel: "Login" },
   { to: "/cart", icon: ShoppingCart, ariaLabel: "Cart" },
 ];
 

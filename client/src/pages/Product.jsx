@@ -37,7 +37,7 @@ const Product = () => {
     <div className="mx-auto bg-background w-full">
       <div >{loading ? <Loading /> : <ProductDetails selectedProduct={product} />}</div>
       <div className="my-16 py-10">
-        <h2 className="sm:text-6xl text-foreground text-4xl font-bold text-center">You may also like</h2>
+        <h2 className="sm:text-6xl text-foreground text-4xl  text-center">You may also like</h2>
         <div className="mx-auto max-w-5xl mt-14">
           {loading2 ? <Loading /> : <SimilarProducts selectedProduct={similarProducts} />}
         </div>

@@ -6,7 +6,7 @@ const PageNotFound = () => {
       <div className="container mx-auto my-12 py-12">
         <div className="flex justify-center items-center min-h-screen">
           <div className="text-center bg-gray-100 p-8 rounded-lg shadow-lg">
-            <h4 className="text-3xl font-semibold mb-6">404: Page Not Found</h4>
+            <h4 className="text-3xl  mb-6">404: Page Not Found</h4>
             <Link
               to="/"
               className="inline-flex items-center px-6 py-3 text-gray-700 border border-gray-700 hover:bg-gray-700 hover:text-white transition rounded"
