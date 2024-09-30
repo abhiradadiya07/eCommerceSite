@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { ModeToggle } from '@/components/mode-toggle';
 import { navIcons, navLinks } from '@/static/static';
 import { Menu, Search, ShoppingCart, X } from 'lucide-react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const cartList = useSelector((state) => state.cart.cartList);
+  // const cartList = useSelector((state) => state.cart.cartList);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -23,7 +23,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to="/" className="text-2xl flex items-center hover:text-primary">
-            <span className="logo">Multimart</span>
+            <span className="logo">EliteBazar</span>
           </Link>
 
           {/* Navigation Links (hidden on mobile) */}
