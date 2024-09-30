@@ -7,7 +7,7 @@ https://e-commerce-site-gules-nine.vercel.app/
 
 ## 😎 Features
 
-- Beauty UI similar to ecommerce website
+- Beautful UI similar to ecommerce website
 - Fully responsive and mobile friendly
 - User can add items to cart
 - User can view details of an item
