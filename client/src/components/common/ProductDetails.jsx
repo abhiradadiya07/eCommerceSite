@@ -16,7 +16,17 @@ const ProductDetails = ({ selectedProduct }) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
   const handleQuantityChange = (e) => {
-    setQuantity(e.target.value);
+    const value = parseInt(e.target.value, 10);
+    if (value < 0) {
+      toast({
+        title: "Negative value.",
+        description: `Negative quantity is not allowed.`,
+        variant: "success",
+      });
+      setQuantity(0);
+      return
+    }
+    setQuantity(value);
   };
   const addProduct = (product, quantity) => {
     dispatch(addToCart({ product: product, num: quantity }));
@@ -64,6 +74,7 @@ const ProductDetails = ({ selectedProduct }) => {
               <Button
                 className="border bg-gray-700 border-gray-700 px-6 py-2 rounded hover:bg-gray-800 text-white transition"
                 onClick={() => addProduct(selectedProduct, quantity)}
+                disabled={quantity === 0}
               >
                 Add to Cart
               </Button>

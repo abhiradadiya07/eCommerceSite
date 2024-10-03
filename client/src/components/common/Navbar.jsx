@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ModeToggle } from '@/components/mode-toggle';
-import { navIcons, navLinks } from '@/static/static';
+import { navLinks } from '@/static/static';
 import { Menu, Search, ShoppingCart, X } from 'lucide-react';
+import { useSelector } from 'react-redux';
 // import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   // const cartList = useSelector((state) => state.cart.cartList);
-
+  const { cartList } = useSelector((state) => state.cart);
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
@@ -35,18 +36,26 @@ const Navbar = () => {
             ))}
           </div>
 
+
           {/* Icons */}
           <div className="flex items-center space-x-4">
-            {navIcons.map((item, index) => (
-              <Link
-                key={index}
-                to={item.to}
-                aria-label={item.ariaLabel}
-                className={`hover:text-primary ${item.icon === Search || item.icon === ShoppingCart ? 'block' : 'hidden lg:block'}`}
-              >
-                <item.icon className="h-6 w-6" />
-              </Link>
-            ))}
+            <Link
+              to="/products"
+              aria-label="Search products"
+              className="hover:text-primary  block "
+            >
+              <Search className="h-6 w-6" />
+            </Link>
+            <Link
+              to="/cart"
+              aria-label="Cart"
+              className="hover:text-primary relative"
+            >
+              <ShoppingCart className="h-6 w-6" />
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 text-[10px]">
+                {cartList.length}
+              </span>
+            </Link>
             <ModeToggle />
           </div>
         </div>

@@ -37,13 +37,6 @@ export const navLinks = [
   { to: "/about", text: "About Us" },
 ];
 
-import { Search, ShoppingCart } from "lucide-react";
-
-export const navIcons = [
-  { to: "/products", icon: Search, ariaLabel: "Search products" },
-  { to: "/cart", icon: ShoppingCart, ariaLabel: "Cart" },
-];
-
 export const SliderData = [
   {
     id: 1,

@@ -9,7 +9,7 @@ const Home = () => {
       <SliderHome/>
       <Section title={"women's clothing"}  bgColor={"bg-background"} />
       <Section title={"men's clothing"} bgColor={"bg-background"}  />
-      <Section title={"jewelery"}   bgColor={"bg-background"} />
+      <Section title={"jewellery"}   bgColor={"bg-background"} />
       <Section title={"electronics"} bgColor={"bg-background"}  />
     </div>
   )

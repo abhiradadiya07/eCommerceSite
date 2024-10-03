@@ -5,12 +5,15 @@ import ProductCard from "./ProductCard";
 import axios from "axios";
 import Loading from "./Loading";
 
-const Section = ({ title, bgColor}) => {
+const Section = ({ title, bgColor }) => {
 
   const [productItems, setProductItems] = useState([])
   const [loading, setLoading] = useState(false);
   const getProductByCategory = async () => {
     setLoading(true);
+    if (title === "jewellery") {
+      title = "jewelery"
+    }
     const response = await axios.get(`https://fakestoreapi.com/products/category/${title}?limit=6`);
     const data = response.data;
     setProductItems(data);

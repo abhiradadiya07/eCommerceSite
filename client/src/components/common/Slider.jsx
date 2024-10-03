@@ -31,8 +31,7 @@ const SliderHome = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
-    // pauseOnHover: true,
-    // adaptiveHeight: true,
+    pauseOnHover: false,
   };
 
   return (

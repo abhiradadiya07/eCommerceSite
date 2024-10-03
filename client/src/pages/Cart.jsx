@@ -117,7 +117,7 @@ const Cart = () => {
                           </div>
                           <div className="w-full sm:w-1/4 flex flex-col items-center">
                             <div className="flex items-center mb-4">
-                              <Button className="" onClick={() => decreaseItem(item)}><Minus /></Button>
+                              <Button onClick={() => item.qty > 1 && decreaseItem(item)}><Minus /></Button>
                               <p className="mx-4">{item.qty}</p>
                               <Button onClick={() => addItem(item)}><Plus /></Button>
                             </div>
